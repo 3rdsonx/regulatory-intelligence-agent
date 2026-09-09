@@ -1,113 +1,108 @@
 {
   "entity": "NVIDIA Corporation (NVDA)",
-  "as_of_date": "2026-09-08",
+  "as_of_date": "2026-09-10",
   "developments": [
     {
-      "title": "NVIDIA to acquire Hugging Face for ~$11.9B plus $1B retention; adds AI/open\u2011source regulatory risk disclosure",
+      "title": "Fiscal 2026 Form 10\u2011K details impact and ongoing risks from U.S. export controls, China exposure, and AI regulation",
+      "type": "filing",
+      "date": "2026-02-26",
+      "issuing_body": "NVIDIA Corporation / U.S. SEC",
+      "summary": "NVIDIA\u2019s Form 10\u2011K for the fiscal year ended January 25, 2026 reports revenue of $215.9 billion (up 65% year\u2011over\u2011year) with 31% of revenue from outside the U.S., and devotes expanded risk\u2011factor disclosure to tightening U.S. export controls on advanced GPUs, the highly competitive and constrained China market, and emerging AI regulatory proposals that have already affected customer perceptions of H20 products.",
+      "materiality": "high",
+      "why_it_matters": "The 10\u2011K confirms that export controls have already disrupted NVIDIA\u2019s sales (including H20), warehousing in Hong Kong, and may disproportionately impact NVIDIA versus non\u2011U.S. competitors, potentially prompting customers and foreign governments to design\u2011out its chips. It also warns that further AI\u2011specific regulation and legislative proposals (including chip feature mandates) could increase compliance costs, trigger investigations or enforcement, reduce demand in China and beyond, and materially affect NVIDIA\u2019s business, operating results, and financial condition.",
+      "confidence": "high",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000038/a2026-annualxreportxwebxfi.pdf"
+      ]
+    },
+    {
+      "title": "8\u2011K announcing definitive agreement to acquire Hugging Face and adding AI\u2011regulation risk factor",
       "type": "filing",
       "date": "2026-09-02",
-      "issuing_body": "NVIDIA / U.S. SEC",
-      "summary": "NVIDIA filed a Form 8\u2011K announcing a definitive agreement to acquire Hugging Face, Inc., with an approximately $11.9 billion cash purchase price plus up to $1.0 billion in equity\u2011based retention for employees, expected to close in 1H 2027 subject to regulatory approvals. The 8\u2011K adds a specific risk factor warning that government actions to restrict open\u2011source AI models\u2014especially models originating from China\u2014could materially impact the Hugging Face platform and NVIDIA\u2019s business, operating results, and financial condition.",
+      "issuing_body": "NVIDIA Corporation / U.S. SEC",
+      "summary": "On September 2, 2026 NVIDIA filed an 8\u2011K disclosing a definitive agreement to acquire Hugging Face, Inc., with approximately $11.9 billion in purchase price plus up to $1.0 billion in equity\u2011based retention for employees, subject to regulatory approvals. The filing includes a new risk factor highlighting that potential government restrictions on AI models\u2014especially open\u2011source models, including many originating in China\u2014could restrict Hugging Face\u2019s platform and lead to investigations or enforcement actions.",
       "materiality": "high",
-      "why_it_matters": "The deal is large, strategically central to NVIDIA\u2019s AI ecosystem, and explicitly conditioned on regulatory approvals, exposing NVIDIA to antitrust and AI\u2011safety policy scrutiny in multiple jurisdictions. The new risk factor underscores a material policy risk: future U.S. or foreign restrictions on open\u2011source model development, distribution, or China\u2011linked models could impair Hugging Face\u2019s platform and reduce demand for NVIDIA compute, implying elevated regulatory risk around AI content, export controls, and competition in AI tooling.",
+      "why_it_matters": "This is a large, strategically important acquisition that will be scrutinized by competition and AI regulators given Hugging Face\u2019s central role in the open\u2011model ecosystem and NVIDIA\u2019s dominant AI\u2011hardware position. NVIDIA\u2019s own added risk factor underscores that prospective AI rules on model development, distribution, access, or datasets could force significant compliance changes to the platform, restrict offerings, or result in regulatory investigations, with knock\u2011on effects for NVIDIA\u2019s AI stack and demand for its GPUs.",
       "confidence": "high",
       "source_urls": [
         "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
       ]
     },
     {
-      "title": "Massive residual value guarantees for 4.25 GW OpenAI data center with option up to 8+ GW at Ohio PORTS site",
+      "title": "Material off\u2011balance\u2011sheet residual value guarantees for 4.25 GW OpenAI data\u2011center leases at PORTS Technology Campus",
       "type": "filing",
       "date": "2026-08-17",
-      "issuing_body": "NVIDIA / U.S. SEC",
-      "summary": "In an 8\u2011K, NVIDIA disclosed a multi\u2011year partnership with SB Energy to develop the PORTS Technology Campus AI data center in Ohio and entered multiple residual value guaranties covering leases for about 4.25 GW of IT load, with the ability to extend credit support to roughly another 3.8 GW. NVIDIA\u2019s aggregate payment obligation on the initial commitment is cumulatively capped at $105 billion, triggered if OpenAI (the tenant) defaults or becomes insolvent, and can involve NVIDIA assuming leases or covering shortfalls versus guaranteed values.",
+      "issuing_body": "NVIDIA Corporation / U.S. SEC",
+      "summary": "In an 8\u2011K dated August 17, 2026, NVIDIA disclosed a multi\u2011year partnership with SB Energy Corp. to develop the PORTS Technology Campus in Pike County, Ohio, under which it executed multiple residual value guarantees tied to leases supporting approximately 4.25 gigawatts of IT load. An OpenAI affiliate will be tenant, deploying NVIDIA\u2019s DSX AI factory platform; NVIDIA has guaranteed residual values to the lessor, with OpenAI agreeing to reimburse and indemnify NVIDIA for amounts actually paid under the guarantees.",
       "materiality": "high",
-      "why_it_matters": "While structured as guarantees rather than traditional debt, the commitments create very large contingent obligations tied to a single tenant\u2019s (OpenAI\u2019s) credit and the long\u2011term value of specialized AI data center infrastructure. This is a significant off\u2011balance\u2011sheet exposure that could become material under stress scenarios, affects NVIDIA\u2019s risk profile and capital planning, and may draw regulatory and investor scrutiny around disclosure of long\u2011dated AI\u2011infrastructure risks.",
+      "why_it_matters": "The guarantees constitute a significant off\u2011balance\u2011sheet obligation related to a very large AI\u2011data\u2011center buildout. While OpenAI has agreed to indemnify NVIDIA, NVIDIA still bears counterparty, credit\u2011rating, and structure risk, and regulators or investors may scrutinize whether the guarantees should be reflected in leverage and risk metrics. The project\u2019s scale ties NVIDIA\u2019s exposure more tightly to a single tenant and to U.S. policy and permitting around large\u2011scale AI power infrastructure.",
       "confidence": "high",
       "source_urls": [
-        "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
-        "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm"
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm"
       ]
     },
     {
-      "title": "BIS revises China export\u2011license policy for NVIDIA H200\u2011class AI chips from presumption of denial to case\u2011by\u2011case review",
-      "type": "policy",
-      "date": "2026-01-15",
-      "issuing_body": "U.S. Department of Commerce, Bureau of Industry and Security (BIS)",
-      "summary": "BIS issued a final rule revising the license review policy for exports to China and Macau of certain advanced computing semiconductors, explicitly citing NVIDIA\u2019s H200 and equivalents. For chips with total processing performance (TPP) below 21,000 and DRAM bandwidth under 6,500 GB/s (e.g., H200/AMD MI325X) that are commercially available in the U.S., BIS is moving from a presumption of denial to case\u2011by\u2011case review, subject to conditions including sufficient U.S. supply, no diversion of global foundry capacity away from U.S. end\u2011users, adequate recipient security procedures, and third\u2011party testing in the U.S.",
-      "materiality": "high",
-      "why_it_matters": "This rule directly targets NVIDIA\u2019s upper\u2011tier AI accelerators and partially relaxes earlier de\u2011facto bans, enabling some controlled export of advanced NVIDIA chips to China/Macau under strict licensing. It meaningfully affects NVIDIA\u2019s addressable China market, compliance burden, and supply\u2011allocation decisions and underscores that future product definitions and performance bins will remain tightly linked to evolving U.S. national\u2011security export policy.",
-      "confidence": "high",
-      "source_urls": [
-        "https://www.federalregister.gov/documents/2026/01/15/2026-00789/revision-to-license-review-policy-for-advanced-computing-commodities",
-        "https://public-inspection.federalregister.gov/2026-00789.pdf"
-      ]
-    },
-    {
-      "title": "New 25% U.S. tariff authority on certain advanced computing chips, with broad carve\u2011outs for U.S. data\u2011center and R&D use",
-      "type": "policy",
-      "date": "2026-01-20",
-      "issuing_body": "President of the United States / U.S. Department of Commerce (Section 232 proclamation)",
-      "summary": "A presidential proclamation in the Federal Register imposes an immediate 25% ad valorem duty on imports of specified advanced computing chips and derivatives when the imports do not support U.S. technology\u2011supply\u2011chain buildout and domestic manufacturing. The proclamation simultaneously exempts imports for U.S. data\u2011center use, repairs, R&D, startups, non\u2011data\u2011center consumer and civil industrial applications, U.S. public\u2011sector uses, and other use\u2011cases the Secretary deems supportive of the domestic technology supply chain.",
-      "materiality": "medium",
-      "why_it_matters": "While the annexed tariff lines are at the HS\u2011code level and not brand\u2011specific, they cover advanced AI chips central to NVIDIA\u2019s portfolio. The structure could raise costs for certain import routes or non\u2011qualifying uses while favoring domestic manufacturing and U.S.\u2011based data\u2011center deployments\u2014potentially accelerating onshore demand for NVIDIA hardware but adding complexity to supply\u2011chain structuring and customs compliance.",
-      "confidence": "medium",
-      "source_urls": [
-        "https://www.federalregister.gov/documents/2026/01/20/2026-01052/adjusting-imports-of-semiconductors-semiconductor-manufacturing-equipment-and-their-derivative",
-        "https://public-inspection.federalregister.gov/2026-01052.pdf"
-      ]
-    },
-    {
-      "title": "NVIDIA issues large multi\u2011tranche senior notes due 2028\u20132056 under shelf registration",
+      "title": "June 2026 debt offering to significantly increase long\u2011term notes outstanding",
       "type": "filing",
       "date": "2026-06-15",
-      "issuing_body": "NVIDIA / U.S. SEC",
-      "summary": "NVIDIA filed a preliminary prospectus supplement under its May 2025 shelf registration to offer multiple series of unsecured senior notes maturing between 2028 and 2056. The notes rank pari passu with NVIDIA\u2019s existing senior unsecured debt, pay semiannual interest, include standard optional\u2011redemption provisions, and are intended for general corporate purposes as detailed in the prospectus supplement, with risk factors incorporated by reference to the FY 2026 Form 10\u2011K and latest Form 10\u2011Q.",
+      "issuing_body": "NVIDIA Corporation / U.S. SEC",
+      "summary": "NVIDIA filed a preliminary prospectus supplement on June 15, 2026 under its shelf registration to issue multiple series of senior unsecured notes maturing between 2028 and 2056. The supplement notes that, as of April 26, 2026, NVIDIA already had $8.5 billion aggregate principal amount of senior notes outstanding before this new issuance and highlights that additional debt will increase debt\u2011service obligations and could adversely affect financial condition and cash flows.",
       "materiality": "medium",
-      "why_it_matters": "The offering extends NVIDIA\u2019s debt maturity profile and increases financial flexibility to fund capex, acquisitions (including data\u2011center and AI investments) and shareholder returns, in the context of extremely high growth and large contingent obligations. For investors and regulators, it underscores a shift toward more leveraged funding of AI\u2011infrastructure buildout and heightens the importance of monitoring covenant structure and overall leverage versus cash generation.",
+      "why_it_matters": "The multi\u2011tranche offering extends NVIDIA\u2019s maturity profile and funds its aggressive AI\u2011infrastructure and strategic investment program, but at the cost of higher leverage and fixed obligations across the curve. The risk disclosures emphasize that greater debt service could constrain financial flexibility in the face of export\u2011control shocks, regulatory actions, or cyclical demand swings in AI compute.",
       "confidence": "high",
       "source_urls": [
         "https://www.sec.gov/Archives/edgar/data/1045810/000119312526270302/d118718d424b5.htm"
       ]
     },
     {
-      "title": "SEC staff grants NVIDIA no\u2011action relief to exclude shareholder proposal on reporting military\u2011related sales",
-      "type": "guidance",
-      "date": "2026-03-10",
-      "issuing_body": "U.S. SEC Division of Corporation Finance",
-      "summary": "In a Rule 14a\u20118 no\u2011action letter, the SEC\u2019s Division of Corporation Finance stated it would not object if NVIDIA excluded from its 2026 proxy materials a shareholder proposal from TTT Investments LLC (submitted via Open MIC) requesting a report explaining NVIDIA\u2019s strategic rationale for engaging in military sales and contracts. NVIDIA argued the proposal relates to ordinary business operations under Rule 14a\u20118(i)(7), and the staff accepted the company\u2019s representation and granted relief.",
-      "materiality": "low",
-      "why_it_matters": "The decision signals that, at least for the 2026 season, SEC staff viewed NVIDIA\u2019s military and defense\u2011related sales as part of ordinary business not requiring shareholder\u2011mandated reporting. While not an enforcement action, it is relevant to governance and ESG dynamics around defense and dual\u2011use AI chips, and may inform future shareholder\u2011proposal strategies and NVIDIA\u2019s disclosure posture on sensitive government/defense customers.",
-      "confidence": "high",
+      "title": "Federal Register revision to U.S. export license review policy for advanced\u2011computing commodities",
+      "type": "policy",
+      "date": "2026-01-15",
+      "issuing_body": "U.S. Department of Commerce, Bureau of Industry and Security (BIS)",
+      "summary": "BIS published a final rule revising its license review policy for certain advanced\u2011computing semiconductors exported to China and Macau, tightening the standard applied to license applications for covered items. The rule alters how BIS evaluates exports of advanced computing commodities and related technology, including high\u2011performance GPUs used in AI and data\u2011center applications.",
+      "materiality": "high",
+      "why_it_matters": "NVIDIA\u2019s data\u2011center GPUs are squarely in the scope of recent BIS actions; a more restrictive license\u2011review posture increases the risk that licenses for China and Macau will be denied or conditioned, reducing addressable demand and creating compliance and supply\u2011chain friction. This policy shift compounds the export\u2011control impacts already described in NVIDIA\u2019s 10\u2011K and could drive further product segmentation or redesign for controlled markets, with revenue and margin implications.",
+      "confidence": "medium",
       "source_urls": [
-        "https://www.sec.gov/files/corpfin/no-action/14a-8/tttnvidia31026.pdf"
+        "https://www.federalregister.gov/documents/2026/01/15/2026-00789/revision-to-license-review-policy-for-advanced-computing-commodities"
       ]
     },
     {
-      "title": "Section 301 China semiconductor tariffs framework finalized, with future increases signaled",
-      "type": "policy",
-      "date": "2025-12-29",
-      "issuing_body": "Office of the U.S. Trade Representative (USTR)",
-      "summary": "USTR published a Notice of Action under Section 301 concluding that China\u2019s acts and policies targeting semiconductor\u2011industry dominance are actionable and establishing a new tariff framework on semiconductors from China. The action sets an initial tariff rate of 0% on semiconductors, to increase on June 23, 2027 to a rate to be announced at least 30 days beforehand, with emphasis on China\u2019s state support, market access restrictions, and forced technology transfer in semiconductors and downstream critical\u2011industry products.",
+      "title": "Q2 FY 2027 8\u2011K and earnings release underscore scale of AI data\u2011center buildout and regulatory\u2011change exposure",
+      "type": "filing",
+      "date": "2026-08-26",
+      "issuing_body": "NVIDIA Corporation / U.S. SEC",
+      "summary": "NVIDIA furnished an 8\u2011K with its Q2 FY 2027 press release showing quarterly revenue of $96.2 billion, including $89.0 billion from Data Center, and noted that the \u201cAI infrastructure buildout is at full steam.\u201d The release\u2019s forward\u2011looking statement section references risks from changes in laws and regulations, including export controls and other rules, and cross\u2011references risk factors in its 10\u2011K and subsequent 10\u2011Qs.",
       "materiality": "medium",
-      "why_it_matters": "Although not naming NVIDIA, the measure affects the broader semiconductor ecosystem\u2014including foundries, packaging, and downstream products that use NVIDIA GPUs\u2014by signaling escalating cost and policy risk around Chinese semiconductor content. This could drive further supplier diversification and onshoring that ultimately benefits NVIDIA\u2019s U.S.\u2011 and allied\u2011based manufacturing and assembly footprint, but also raises geopolitical and supply\u2011chain uncertainty for its China\u2011related sales and partners.",
+      "why_it_matters": "The filing quantifies how dependent NVIDIA has become on hyperscale AI\u2011data\u2011center demand and, by extension, on regulatory regimes governing AI chips, data\u2011center energy, and cross\u2011border AI services. While there are no new specific investigations reported, the magnitude of the business now tied to AI policy choices amplifies the importance of export\u2011control and AI\u2011governance developments flagged in other filings and in BIS rules.",
       "confidence": "high",
       "source_urls": [
-        "https://www.federalregister.gov/documents/2025/12/29/2025-23912/notice-of-action-chinas-acts-policies-and-practices-related-to-targeting-of-the-semiconductor"
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm"
+      ]
+    },
+    {
+      "title": "No new SEC, DOJ, or FTC enforcement actions specifically targeting NVIDIA identified in the last 18 months; prior securities litigation continues at district court level",
+      "type": "enforcement",
+      "date": "2025-01-13 (latest key procedural date cited)",
+      "issuing_body": "U.S. Supreme Court / U.S. Court of Appeals for the Ninth Circuit / U.S. District Court (N.D. Cal.)",
+      "summary": "NVIDIA\u2019s fiscal 2026 Form 10\u2011K notes that in securities litigation captioned In re NVIDIA Corporation Securities Litigation, the Supreme Court dismissed NVIDIA\u2019s writ of certiorari as improvidently granted on December 11, 2024 and issued judgment on January 13, 2025. The Ninth Circuit\u2019s earlier judgment then took effect on February 20, 2025, and the case was remanded to the district court for further proceedings. A related derivative action remains administratively closed pending developments. No new SEC, DOJ, or FTC enforcement actions against NVIDIA were found in recent primary sources.",
+      "materiality": "medium",
+      "why_it_matters": "The securities case remains an ongoing litigation risk with potential for damages or settlements, but it is not a new development within the last few months. The absence of fresh enforcement actions suggests no additional immediate regulatory overhang; however, NVIDIA\u2019s own filings warn that export\u2011control and AI\u2011regulation missteps could give rise to future investigations or enforcement, particularly as its scale and geopolitical profile grow.",
+      "confidence": "medium",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
       ]
     }
   ],
-  "overall_assessment": "Recent developments around NVIDIA are dominated by very large, strategically important transactions (the Hugging Face acquisition and the SB Energy/OpenAI PORTS campus guarantees) and a tightening but more nuanced U.S. trade and export\u2011control regime explicitly referencing NVIDIA\u2019s AI chips. On the regulatory\u2011policy side, BIS\u2019s January 2026 rule and the Section 232/301 trade measures confirm that NVIDIA\u2019s highest\u2011end accelerators will remain under close national\u2011security management, albeit with some incremental room for licensed exports and favorable treatment for U.S.\u2011based deployment. There are no new SEC enforcement actions or formal investigations against NVIDIA in the period reviewed, but governance and ESG pressures (e.g., the excluded military\u2011sales proposal) continue in the background. Overall, NVIDIA\u2019s regulatory risk is elevated but manageable, with the biggest sensitivities around export controls, large off\u2011balance\u2011sheet infrastructure commitments, and regulatory reviews of major AI\u2011platform acquisitions such as Hugging Face.",
+  "overall_assessment": "Over the last 18 months NVIDIA\u2019s regulatory risk profile has become more complex but is not presently dominated by active enforcement actions. The most material developments are structural: an expanded export\u2011control and AI\u2011policy regime (including BIS\u2019s January 2026 license\u2011review revision) that directly constrains advanced GPU sales, NVIDIA\u2019s own 10\u2011K acknowledgement that these controls have already disrupted products like H20 and may push customers and foreign governments toward non\u2011U.S. suppliers, and a pending $11.9+ billion acquisition of Hugging Face that will invite competition and AI\u2011governance scrutiny. Large off\u2011balance\u2011sheet guarantees for the 4.25\u2011GW PORTS AI campus and significant new debt issuance further increase the company\u2019s exposure to any adverse regulatory or policy shocks affecting AI compute demand. \n\nNVIDIA\u2019s filings do not reveal new SEC, DOJ, or FTC enforcement actions in the recent period; earlier securities litigation continues at the district\u2011court level following the Supreme Court\u2019s procedural disposition. Given NVIDIA\u2019s outsized role in global AI infrastructure, future changes in export\u2011control rules, AI\u2011model regulation, and potential competition remedies around ecosystem acquisitions (like Hugging Face) remain the key regulatory variables that could materially alter its risk and earnings trajectory.",
   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+    "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000038/a2026-annualxreportxwebxfi.pdf",
     "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm",
     "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
-    "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
     "https://www.sec.gov/Archives/edgar/data/1045810/000119312526270302/d118718d424b5.htm",
-    "https://www.sec.gov/files/corpfin/no-action/14a-8/tttnvidia31026.pdf",
     "https://www.federalregister.gov/documents/2026/01/15/2026-00789/revision-to-license-review-policy-for-advanced-computing-commodities",
-    "https://public-inspection.federalregister.gov/2026-00789.pdf",
-    "https://www.federalregister.gov/documents/2026/01/20/2026-01052/adjusting-imports-of-semiconductors-semiconductor-manufacturing-equipment-and-their-derivative",
-    "https://public-inspection.federalregister.gov/2026-01052.pdf",
-    "https://www.federalregister.gov/documents/2025/12/29/2025-23912/notice-of-action-chinas-acts-policies-and-practices-related-to-targeting-of-the-semiconductor-industry"
+    "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm"
   ]
 }

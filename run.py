@@ -1,7 +1,7 @@
 """CLI entrypoint: research a company, sector, or topic.
 
     python run.py "NVIDIA"
-    python run.py "semiconductor export controls" --model gpt-4o --json out.json
+    python run.py "semiconductor export controls" --model anthropic:claude-sonnet-5 --json out.json
 """
 
 from __future__ import annotations
@@ -33,7 +33,7 @@ def _print_brief(brief) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("subject", help="Company, sector, or topic to research")
-    parser.add_argument("--model", default=None, help="Override OPENAI_MODEL")
+    parser.add_argument("--model", default=None, help="Override LLM_MODEL, e.g. openai:gpt-4o or anthropic:claude-sonnet-5")
     parser.add_argument("--json", metavar="PATH", default=None, help="Also write the brief as JSON")
     args = parser.parse_args()
 

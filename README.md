@@ -1,63 +1,84 @@
 # regulatory-intelligence-agent
 
 A small **LangChain agent** that monitors **regulatory and filing intelligence** for a
-company, sector, or topic, using **Nimble** as its web-retrieval layer.
+company, sector, or topic, using **Nimble** for web data.
 
-Give it a subject. It runs several targeted web searches — SEC filings, enforcement
-actions, investigations, policy/rule changes — reads the primary documents, and returns a
-structured brief of the material developments with citations and a materiality grade.
+Give it a subject. It runs several targeted searches — SEC filings, enforcement actions,
+investigations, policy/rule changes — reads the primary documents, and returns a
+structured brief of the material developments with citations, a materiality grade, and a
+confidence grade.
 
-This is **Pattern A**: the LangChain agent owns the workflow (what to search, how to read
-it, how to synthesise), and Nimble is the tool it calls for web data.
+The repo ships both ways of using Nimble for the same task:
 
-## How it works
+| File | Pattern | Who runs the research loop |
+| --- | --- | --- |
+| `agent.py` / `run.py` | **A** — LangChain + Nimble Search API | the LangChain agent |
+| `agent_api_v2.py` | **B** — Nimble Web Search Agent (Agent API) | Nimble |
+
+## Pattern A — the LangChain agent drives
 
 ```
-run.py ──> agent.py: create_agent(model=gpt-5.1, tools=[nimble_search], response_format=RegulatoryBrief)
-                          │
-                          └─ nimble_search  →  Nimble Search API (search_depth="standard",
-                                                full_content=True for documents it will cite,
-                                                include_domains scoped per pass)
+run.py ─> agent.py: create_agent(model, tools=[nimble_search], response_format=RegulatoryBrief)
+                       │
+                       └─ nimble_search  →  Nimble Search API
+                            search_depth="lite"      → scan for candidate documents
+                            full_content=True (≤4)   → pull + slice the primary docs to cite
+                            include_domains=[...]     → scope each pass (sec.gov, federalregister.gov, …)
 ```
 
-- `config.py` — the agent's role (`SKILL`), objectives (`GOALS`), and source tiers
-  (`SOURCE_TIERS`), plus the system prompt builder.
-- `schema.py` — the `RegulatoryBrief` / `Development` Pydantic models used as the agent's
-  structured output.
-- `agent.py` — builds the LangChain agent and the `nimble_search` tool.
+- `config.py` — the agent's role (`SKILL`), objectives (`GOALS`), and `SOURCE_TIERS`
+  (with a `<company>.com` placeholder the agent substitutes per subject).
+- `schema.py` — the `RegulatoryBrief` / `Development` structured-output models.
+- `agent.py` — builds the agent and the `nimble_search` tool. `full_content` results are
+  **sliced to the query-relevant windows** of the document, not truncated to the first N
+  characters, so a deep read of a 150–400 KB 10-K keeps Item 1A / export-control / legal
+  sections rather than the cover page.
 - `run.py` — CLI entrypoint.
 
-### A note on the Nimble client
+## Pattern B — Nimble's Web Search Agent does the research
 
-The `nimble_search` tool calls Nimble's official **`nimble-python`** SDK directly. That is
-the same client the `langchain-nimble` package wraps internally; we call it directly
-because, as of `langchain-nimble` 4.0.0, its search wrapper does not expose `full_content`
-and its domain-scoped ranking is unreliable for primary-document retrieval (an
-`include_domains=["sec.gov"]` query returns `sec.gov/ombuds` rather than the filing you
-asked for). Nimble's **Agent API V2** is a better fit for `langchain-nimble` — see the
-`company-due-diligence-agent` repo for that pattern.
+`agent_api_v2.py` hands Nimble one research objective and follows the documented
+`run → poll → result` lifecycle via the official `nimble-python` SDK:
+
+```bash
+uv run python agent_api_v2.py "NVIDIA"
+uv run python agent_api_v2.py "semiconductor export controls" --effort x-high --json out.json
+```
+
+It passes the `RegulatoryBrief` shape as `output_schema`, so Nimble returns structured
+data with per-claim citations and confidence.
+
+## The Nimble client
+
+Both patterns use Nimble's official **`nimble-python`** SDK directly. For the Search API
+that is a deliberate choice: as of `langchain-nimble` 4.0.0 its search wrapper does not
+expose `full_content` and its domain-scoped ranking is unreliable for primary-document
+retrieval (`include_domains=["sec.gov"]` returns `sec.gov/ombuds` rather than the filing).
 
 ## Setup
 
 ```bash
 uv sync                       # or: pip install -e .
-cp .env.example .env          # add NIMBLE_API_KEY and OPENAI_API_KEY
+cp .env.example .env          # NIMBLE_API_KEY + an LLM_MODEL and its key
 ```
+
+`LLM_MODEL` is provider-agnostic via LangChain's `init_chat_model` —
+`openai:gpt-5.1` (default), `anthropic:claude-sonnet-5`, `google_genai:gemini-2.5-pro`,
+etc. Install the matching provider package (`langchain-openai` is bundled).
 
 ## Run
 
 ```bash
 uv run python run.py "NVIDIA"
-uv run python run.py "semiconductor export controls" --json brief.json
-uv run python run.py "Microsoft" --model gpt-4o
+uv run python run.py "Microsoft" --model anthropic:claude-sonnet-5 --json brief.json
 ```
 
-Environment overrides: `OPENAI_MODEL` (default `gpt-5.1`), `NIMBLE_CONTENT_CHAR_CAP`
-(default `6000`), `AGENT_RECURSION_LIMIT` (default `40`).
+Env overrides: `LLM_MODEL`, `NIMBLE_CONTENT_CHAR_CAP` (default `8000`),
+`AGENT_RECURSION_LIMIT` (default `40`).
 
 ## Example
 
-`examples/nvidia_brief.json` is a real run for `"NVIDIA"` — seven developments spanning an
-8-K on the Hugging Face acquisition, off-balance-sheet data-center guarantees, a BIS
-export-control rule, Section 232/301 trade measures, a debt shelf takedown, and an SEC
-no-action letter, each citing the primary document on `sec.gov` or `federalregister.gov`.
+`examples/nvidia_brief.json` — a real Pattern A run for `"NVIDIA"`: material developments
+spanning recent 10-K / 10-Q / 8-K disclosures, BIS export-control rules, and ongoing
+securities litigation, each citing the primary document on `sec.gov` or
+`federalregister.gov`.

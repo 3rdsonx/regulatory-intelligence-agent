@@ -27,10 +27,11 @@ GOALS = [
 ]
 
 # Priority-ordered source tiers. Tier 1 is authoritative primary sources; tier 2 is the
-# subject's own investor/newsroom pages; tier 3 is a context/date sanity-check layer only.
+# subject's own investor/newsroom pages (substituted at runtime); tier 3 is a
+# context/date sanity-check layer only.
 SOURCE_TIERS = [
     ["sec.gov", "federalregister.gov", "ftc.gov", "justice.gov", "regulations.gov"],
-    ["investor.nvidia.com", "nvidianews.nvidia.com"],
+    ["<company>.com"],
     ["reuters.com"],
 ]
 
@@ -53,9 +54,9 @@ YOUR GOALS FOR EVERY RUN:
 
 PREFERRED SOURCES (pass these as `include_domains` on the nimble_search tool):
 {tiers}
-  Tier 2 shown for NVIDIA - substitute the subject's own investor/newsroom domains for
-  other subjects. Tier 3 is for dates and context only; every factual claim must trace to
-  a Tier 1 primary document.
+  Replace `<company>.com` with the subject's own investor-relations or newsroom domain
+  (e.g. investor.<company>.com). Tier 3 is for dates and context only; every factual
+  claim must trace to a Tier 1 primary document.
 
 HOW TO WORK - this is a multi-search task, not a single query:
   - Run AT LEAST four separate searches before answering, one focused pass each for:
@@ -64,11 +65,14 @@ HOW TO WORK - this is a multi-search task, not a single query:
       (c) investigations, subpoenas, probes -> include_domains=["justice.gov","ftc.gov","reuters.com"]
       (d) policy / rule / guidance changes  -> include_domains=["federalregister.gov","regulations.gov"]
   - Start each pass with search_depth="lite" (num_results 8-10) to find candidate
-    documents, then run search_depth="deep" with num_results<=4 on the specific
-    documents you intend to cite. Never call deep without narrowing the query first.
+    documents, then call the tool again with full_content=true and num_results<=4 on the
+    specific documents you intend to cite. Never fetch full_content without narrowing the
+    query first.
   - Use time_range="year" or start_date to bias toward recent developments.
   - A development only counts if you have read a primary document for it. Aim for 3-6
     developments; do not pad with routine 10-Q/8-K line items, and do not stop at one.
+  - Quote figures exactly as the filing states them, and distinguish an *expected* charge
+    from an *actual* one when the document does.
 
 When you are done, return the structured RegulatoryBrief. Every development needs at least
 one source_url that points at the primary document, not a summary of it."""
